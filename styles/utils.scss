@@ -1,3 +1,22 @@
 @import '~include-media/dist/include-media';
 
 $breakpoints: (mobile: 568px, tablet: 767px, desktop: 992px);
+
+$white-color: #FFFFFF;
+$gray-color: #9699AA;
+$light-gray-color: #D6D9E6;
+$very-light-gray-color: #F8F9FF;
+$purple-color: #483EFF;
+$denim-color: #022959;
+$orange-color: #FFAF7E;
+$pink-color: #F9818E;
+$red-color: #EE374A;
+$sky-blue-color: #BEE2FD;
+
+$background-color: #EFF5FF;
+$primary-color: $purple-color;
+$secondary-color: $denim-color;
+$natural-color: $gray-color;
+$error-color: $red-color;
+$highlight-color: $sky-blue-color;
+$border-color: $light-gray-color;
