@@ -1,0 +1,57 @@
+@import "styles/utils";
+
+.toggleButtonWrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 24px;
+
+  &.on {
+    .label {
+      &:first-child {
+        color: $natural-color;
+      }
+
+      &:last-child {
+        color: $secondary-color !important;
+      }
+    }
+
+    .toggleButton::before {
+      transform: translateX(calc(38px - 12px - 8px));
+    }
+  }
+
+  .label {
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 16px;
+    cursor: pointer;
+
+    &:first-child {
+      color: $secondary-color;
+    }
+  }
+
+  .toggleButton {
+    position: relative;
+    width: 38px;
+    height: 20px;
+    background: $secondary-color;
+    border-radius: 10px;
+    border: none;
+    cursor: pointer;
+
+    &::before {
+      position: absolute;
+      top: 4px;
+      left: 4px;
+      width: 12px;
+      height: 12px;
+      background: $white-color;
+      border-radius: 50%;
+      content: "";
+      transition: transform 0.3s;
+    }
+  }
+}
