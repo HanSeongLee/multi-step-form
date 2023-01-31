@@ -1,0 +1,58 @@
+@import "styles/utils";
+
+.select {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  list-style: none;
+
+  .option {
+    display: flex;
+    gap: 14px;
+    min-height: 77px;
+    background: $white-color;
+    border: 1px solid $border-color;
+    border-radius: 8px;
+    padding: 14px 16px;
+    cursor: pointer;
+
+    &.active {
+      background: $active-color;
+      border-color: $primary-color;
+    }
+
+    .icon {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+    }
+
+    .labelContainer {
+      display: flex;
+      flex-direction: column;
+
+      .label {
+        font-weight: 500;
+        font-size: 16px;
+        line-height: 18px;
+        color: $secondary-color;
+      }
+
+      .description {
+        font-size: 14px;
+        line-height: 20px;
+        margin-top: 7px;
+      }
+
+      .subLabel {
+        font-size: 12px;
+        line-height: 20px;
+        color: $secondary-color;
+        margin-top: 3px;
+      }
+    }
+  }
+}
