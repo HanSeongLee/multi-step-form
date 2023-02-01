@@ -1,0 +1,10 @@
+@import "styles/utils";
+
+.toggleButtonContainer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 48px;
+  background: $very-light-gray-color;
+  border-radius: 8px;
+}
