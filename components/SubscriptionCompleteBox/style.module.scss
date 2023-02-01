@@ -1,0 +1,35 @@
+@import "styles/utils";
+
+.subscriptionCompletion {
+  text-align: center;
+
+  > div:nth-child(2) {
+    min-height: 400px;
+  }
+
+  > div:nth-child(2), .container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .icon {
+    width: 56px;
+    height: 56px;
+    margin-bottom: 24px;
+  }
+
+  .title {
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 28px;
+    color: $secondary-color;
+    margin-bottom: 9px;
+  }
+
+  .description {
+    font-size: 16px;
+    line-height: 25px;
+  }
+}
