@@ -1,6 +1,6 @@
 import React, { FormHTMLAttributes } from 'react';
-import Form from 'components/Form';
-import InputField from 'components/InputField';
+import Form from 'components/common/Form';
+import InputField from 'components/common/InputField';
 import { Control } from 'react-hook-form/dist/types/form';
 import { Controller } from 'react-hook-form';
 

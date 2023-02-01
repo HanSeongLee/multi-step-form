@@ -1,7 +1,7 @@
 import React, { FormHTMLAttributes } from 'react';
 import styles from './style.module.scss';
 import cn from 'classnames';
-import Form from 'components/Form';
+import Form from 'components/common/Form';
 
 interface IProps extends FormHTMLAttributes<HTMLFormElement> {
     sidebarProps: SideBarProps;

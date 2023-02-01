@@ -1,10 +1,10 @@
 import React, { FormHTMLAttributes } from 'react';
 import styles from './style.module.scss';
 import cn from 'classnames';
-import Button from 'components/Button';
-import Container from 'components/Container';
-import SideBar from 'components/SideBar';
-import Box from 'components/Box';
+import Button from 'components/common/Button';
+import Container from 'components/common/Container';
+import SideBar from 'components/common/SideBar';
+import Box from 'components/common/Box';
 
 interface IProps extends FormHTMLAttributes<HTMLFormElement> {
     sidebarProps: SideBarProps;

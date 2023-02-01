@@ -1,8 +1,8 @@
 import React, { FormHTMLAttributes } from 'react';
 import styles from './style.module.scss';
-import Form from 'components/Form';
-import Select from 'components/Select';
-import ToggleButton from 'components/ToggleButton';
+import Form from 'components/common/Form';
+import Select from 'components/common/Select';
+import ToggleButton from 'components/common/ToggleButton';
 import { PlanOptions } from 'types/plan';
 import { Control } from 'react-hook-form/dist/types/form';
 import { Controller, useWatch } from 'react-hook-form';

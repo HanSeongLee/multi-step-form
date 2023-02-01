@@ -1,7 +1,7 @@
 import React, { FormHTMLAttributes } from 'react';
 import styles from './style.module.scss';
-import Form from 'components/Form';
-import CheckBox from 'components/CheckBox';
+import Form from 'components/common/Form';
+import CheckBox from 'components/common/CheckBox';
 import { AddonsOptions } from 'types/plan';
 import { Control } from 'react-hook-form/dist/types/form';
 import { Controller, useWatch } from 'react-hook-form';

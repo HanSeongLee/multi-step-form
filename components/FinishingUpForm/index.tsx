@@ -1,6 +1,6 @@
 import React, { FormHTMLAttributes, useMemo } from 'react';
 import styles from './style.module.scss';
-import Form from 'components/Form';
+import Form from 'components/common/Form';
 
 interface IProps extends FormHTMLAttributes<HTMLFormElement> {
     onGoBack?: () => void;
