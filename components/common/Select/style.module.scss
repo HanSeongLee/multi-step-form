@@ -20,6 +20,7 @@
     border-radius: 8px;
     padding: 14px 16px;
     cursor: pointer;
+    transition: border-color 0.3s;
 
     @include media(">desktop") {
       flex: 1;
@@ -31,6 +32,10 @@
 
     &.active {
       background: $active-color;
+      border-color: $primary-color;
+    }
+
+    &:hover {
       border-color: $primary-color;
     }
 
