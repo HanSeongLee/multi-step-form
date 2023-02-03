@@ -23,7 +23,7 @@ const CheckBox: React.FC<IProps> = ({
                    ref={inputRef}
                    {...props}
             />
-            <div>
+            <div className={styles.contentContainer}>
                 <div className={styles.label}>
                     {label}
                 </div>
