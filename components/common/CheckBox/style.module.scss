@@ -11,9 +11,14 @@
   border-radius: 8px;
   padding: 11px 16px 12px;
   cursor: pointer;
+  transition: border-color 0.3s;
 
   @include media(">desktop") {
     padding: 18px 24px;
+  }
+
+  &:hover {
+    border-color: $primary-color;
   }
 
   &.on {
