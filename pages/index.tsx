@@ -7,6 +7,9 @@ const Home: NextPage = () => {
   return (
       <>
         <main className={styles.main}>
+            <h1 className={styles.title}>
+                Multi Step Form
+            </h1>
             <Container className={styles.container}>
                 <MultiStepFormContainer />
             </Container>
