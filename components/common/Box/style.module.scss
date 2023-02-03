@@ -7,7 +7,8 @@
   padding: 32px 24px;
 
   @include media(">desktop") {
-    max-width: initial;
+    width: 940px;
+    border-radius: 15px;
     padding: 16px;
   }
 }
