@@ -6,8 +6,35 @@
   overflow: scroll;
   border-radius: 10px;
 
-  .container {
-    position: relative;
+  @include media(">desktop") {
+    max-height: initial;
+    overflow: hidden;
+  }
+
+  .boxWrapper {
+    box-shadow: none;
+    border-radius: 0;
+    padding: 0;
+
+    @include media(">desktop") {
+      display: flex;
+      gap: 100px;
+      box-shadow: 0px 25px 40px -20px rgba(0, 0, 0, 0.095);
+      border-radius: 10px;
+      padding: 16px 100px 16px 16px;
+    }
+
+    .box {
+      position: relative;
+
+      @include media(">desktop") {
+        flex: 1;
+        width: 100%;
+        box-shadow: none;
+        border-radius: 0;
+        padding: 0;
+      }
+    }
 
     .title {
       font-weight: 700;
@@ -15,18 +42,34 @@
       line-height: 28px;
       color: $secondary-color;
       margin-bottom: 8px;
+
+      @include media(">desktop") {
+        font-size: 32px;
+        line-height: 37px;
+        margin-bottom: 11px;
+        padding-top: 40px;
+      }
     }
 
     .description {
       font-size: 16px;
       line-height: 25px;
       margin-bottom: 22px;
+
+      @include media(">desktop") {
+        margin-bottom: 35px;
+      }
     }
 
     .container {
       display: flex;
       flex-direction: column;
       gap: 24px;
+
+      @include media(">desktop") {
+        height: 100%;
+        gap: 32px;
+      }
     }
 
     .buttonContainer {
@@ -42,6 +85,15 @@
       box-shadow: 0px 25px 40px -20px rgba(0, 0, 0, 0.095);
       padding-top: 16px;
       padding-bottom: 16px;
+
+      @include media(">desktop") {
+        flex: 1;
+        min-height: 48px;
+        position: absolute;
+        bottom: 16px;
+        box-shadow: none;
+        background: transparent;
+      }
 
       .rightSide {
         flex: 1;

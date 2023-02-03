@@ -25,46 +25,48 @@ const Form: React.FC<IProps> = ({
         <form className={cn(styles.form, className)}
               {...props}
         >
-            <SideBar sidebarProps={sidebarProps} />
+            <Box className={styles.boxWrapper}>
+                <SideBar sidebarProps={sidebarProps} />
 
-            <Box className={styles.container}>
-                {title && (
-                    <h2 className={styles.title}>
-                        {title}
-                    </h2>
-                )}
-                {description && (
-                    <p className={styles.description}>
-                        {description}
-                    </p>
-                )}
+                <Box className={styles.box}>
+                    {title && (
+                        <h2 className={styles.title}>
+                            {title}
+                        </h2>
+                    )}
+                    {description && (
+                        <p className={styles.description}>
+                            {description}
+                        </p>
+                    )}
 
-                {children && (
-                    <div className={styles.container}>
-                        {children}
-                    </div>
-                )}
-
-                {!footerHidden && (
-                    <Container className={styles.buttonContainer}>
-                        {onGoBack && (
-                            <Button type={'button'}
-                                    variant={'link'}
-                                    onClick={onGoBack}
-                            >
-                                Go Back
-                            </Button>
-                        )}
-
-                        <div className={styles.rightSide}>
-                            <Button type={'submit'}
-                                    variant={confirmButtonVariant}
-                            >
-                                {confirmButtonText}
-                            </Button>
+                    {children && (
+                        <div className={styles.container}>
+                            {children}
                         </div>
-                    </Container>
-                )}
+                    )}
+
+                    {!footerHidden && (
+                        <Container className={styles.buttonContainer}>
+                            {onGoBack && (
+                                <Button type={'button'}
+                                        variant={'link'}
+                                        onClick={onGoBack}
+                                >
+                                    Go Back
+                                </Button>
+                            )}
+
+                            <div className={styles.rightSide}>
+                                <Button type={'submit'}
+                                        variant={confirmButtonVariant}
+                                >
+                                    {confirmButtonText}
+                                </Button>
+                            </div>
+                        </Container>
+                    )}
+                </Box>
             </Box>
         </form>
     );
