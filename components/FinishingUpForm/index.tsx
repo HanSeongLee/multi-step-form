@@ -6,10 +6,11 @@ import { Steps } from 'types/step';
 interface IProps extends FormHTMLAttributes<HTMLFormElement> {
     onGoBack?: () => void;
     subscription: Subscription;
+    onClickChangeButton: () => void;
 }
 
 const FinishingUpForm: React.FC<IProps> = ({
-                                               subscription, ...props
+                                               subscription, onClickChangeButton, ...props
                                            }) => {
     const {
         yearly, plan, addons,
@@ -47,6 +48,7 @@ const FinishingUpForm: React.FC<IProps> = ({
                         </div>
                         <button className={styles.changeButton}
                                 type={'button'}
+                                onClick={onClickChangeButton}
                         >
                             Change
                         </button>
