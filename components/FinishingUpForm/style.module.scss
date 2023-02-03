@@ -12,10 +12,19 @@
     border-radius: 8px;
     padding: 16px;
 
+    @include media(">desktop") {
+      gap: 16px;
+      padding: 16px 24px 24px;
+    }
+
     .planContainer {
       display: flex;
       align-items: center;
       justify-content: space-between;
+
+      @include media(">desktop") {
+        margin-bottom: 8px;
+      }
 
       .planName {
         font-weight: 500;
@@ -23,6 +32,11 @@
         line-height: 16px;
         color: $secondary-color;
         margin-bottom: 3px;
+
+        @include media(">desktop") {
+          font-size: 16px;
+          line-height: 18px;
+        }
       }
 
       .changeButton {
@@ -41,6 +55,11 @@
         line-height: 20px;
         text-align: right;
         color: $secondary-color;
+
+        @include media(">desktop") {
+          font-size: 16px;
+          line-height: 20px;
+        }
       }
     }
   }
@@ -75,6 +94,11 @@
       line-height: 20px !important;
       text-align: right;
       color: $primary-color !important;
+
+      @include media(">desktop") {
+        font-size: 20px;
+        line-height: 20px;
+      }
     }
   }
 }
