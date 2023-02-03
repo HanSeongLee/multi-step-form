@@ -5,6 +5,7 @@ import CheckBox from 'components/common/CheckBox';
 import { AddonsOptions } from 'types/plan';
 import { Control } from 'react-hook-form/dist/types/form';
 import { Controller, useWatch } from 'react-hook-form';
+import { Steps } from 'types/step';
 
 interface IProps extends FormHTMLAttributes<HTMLFormElement> {
     control: Control<any>;
@@ -22,7 +23,7 @@ const PickAddOnsForm: React.FC<IProps> = ({ control, ...props }) => {
               description={'Add-ons help enhance your gaming experience.'}
               sidebarProps={{
                   current: 2,
-                  max: 4,
+                  steps: Steps,
               }}
               {...props}
         >

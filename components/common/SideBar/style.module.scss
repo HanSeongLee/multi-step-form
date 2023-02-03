@@ -13,6 +13,15 @@
   background-size: cover;
   padding: 32px 24px;
 
+  @include media(">desktop") {
+    position: relative;
+    justify-content: flex-start;
+    min-height: 568px;
+    width: 274px;
+    background: url("/img/bg-sidebar-desktop.svg") no-repeat;
+    background-size: cover;
+  }
+
   .stepContainer {
     display: flex;
     align-items: center;
@@ -20,7 +29,20 @@
     gap: 16px;
     list-style: none;
 
+    @include media(">desktop") {
+      flex-direction: column;
+      align-items: flex-start;
+      justify-content: flex-start;
+    }
+
     .step {
+      @include media(">desktop") {
+        display: flex;
+        align-items: center;
+        gap: 16px;
+        text-align: left;
+      }
+
       &.active {
         .circle {
           color: $secondary-color;
@@ -43,6 +65,31 @@
         background: transparent;
         border: 1px solid $white-color;
         border-radius: 50%;
+      }
+    }
+
+    .stepDetails {
+      display: none;
+      flex-direction: column;
+      gap: 4px;
+      text-transform: uppercase;
+
+      @include media(">desktop") {
+        display: flex;
+      }
+
+      .stepText {
+        font-size: 12px;
+        line-height: 14px;
+        color: $light-blue-color;
+      }
+
+      .stepName {
+        font-weight: 700;
+        font-size: 14px;
+        line-height: 16px;
+        letter-spacing: 1px;
+        color: $white-color;
       }
     }
   }

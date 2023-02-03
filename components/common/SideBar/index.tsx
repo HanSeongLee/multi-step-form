@@ -6,13 +6,13 @@ interface IProps extends HTMLAttributes<HTMLDivElement> {
     sidebarProps: SideBarProps;
 }
 
-const SideBar: React.FC<IProps> = ({ sidebarProps: {current, max}, className, ...props }) => {
+const SideBar: React.FC<IProps> = ({ sidebarProps: {current, steps}, className, ...props }) => {
     return (
         <div className={cn(styles.sideBar, className)}
              {...props}
         >
             <ul className={styles.stepContainer}>
-                {[...new Array(max)].map((_, index) => (
+                {steps.map((name, index) => (
                     <li className={cn(styles.step, {
                         [styles.active]: index === current,
                     })}
@@ -20,6 +20,14 @@ const SideBar: React.FC<IProps> = ({ sidebarProps: {current, max}, className, ..
                     >
                         <div className={styles.circle}>
                             {index + 1}
+                        </div>
+                        <div className={styles.stepDetails}>
+                            <div className={styles.stepText}>
+                                Step {index + 1}
+                            </div>
+                            <div className={styles.stepName}>
+                                {name}
+                            </div>
                         </div>
                     </li>
                 ))}

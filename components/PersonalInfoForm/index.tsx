@@ -3,6 +3,7 @@ import Form from 'components/common/Form';
 import InputField from 'components/common/InputField';
 import { Control } from 'react-hook-form/dist/types/form';
 import { Controller } from 'react-hook-form';
+import { Steps } from 'types/step';
 
 interface IProps extends FormHTMLAttributes<HTMLFormElement> {
     control: Control<any>;
@@ -19,7 +20,7 @@ const PersonalInfoForm: React.FC<IProps> = ({ control, ...props }) => {
               description={'Please provide your name, email address, and phone number.'}
               sidebarProps={{
                   current: 0,
-                  max: 4,
+                  steps: Steps,
               }}
               {...props}
         >

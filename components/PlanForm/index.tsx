@@ -6,6 +6,7 @@ import ToggleButton from 'components/common/ToggleButton';
 import { PlanOptions } from 'types/plan';
 import { Control } from 'react-hook-form/dist/types/form';
 import { Controller, useWatch } from 'react-hook-form';
+import { Steps } from 'types/step';
 
 interface IProps extends FormHTMLAttributes<HTMLFormElement> {
     control: Control<any>;
@@ -23,7 +24,7 @@ const PlanForm: React.FC<IProps> = ({ control, ...props }) => {
               description={'You have the option of monthly or yearly billing.'}
               sidebarProps={{
                   current: 1,
-                  max: 4,
+                  steps: Steps,
               }}
               {...props}
         >

@@ -1,6 +1,7 @@
 import React, { FormHTMLAttributes, useMemo } from 'react';
 import styles from './style.module.scss';
 import Form from 'components/common/Form';
+import { Steps } from 'types/step';
 
 interface IProps extends FormHTMLAttributes<HTMLFormElement> {
     onGoBack?: () => void;
@@ -32,7 +33,7 @@ const FinishingUpForm: React.FC<IProps> = ({
               description={'Double-check everything looks OK before confirming.'}
               sidebarProps={{
                   current: 3,
-                  max: 4,
+                  steps: Steps,
               }}
               confirmButtonText={'Confirm'}
               confirmButtonVariant={'primary'}
