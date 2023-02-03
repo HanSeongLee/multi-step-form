@@ -8,22 +8,33 @@
   border: none;
   cursor: pointer;
 
-  &.primary {
-    min-width: 97px;
-    min-height: 40px;
-    color: $white-color;
-    background: $primary-color;
-    border-radius: 4px;
-    padding: 12px 16px;
+  @include media(">desktop") {
+    font-size: 16px;
+    line-height: 18px;
   }
 
+  &.primary,
   &.secondary {
     min-width: 97px;
     min-height: 40px;
-    color: $white-color;
-    background: $secondary-color;
     border-radius: 4px;
     padding: 12px 16px;
+
+    @include media(">desktop") {
+      min-width: 123px;
+      height: 48px;
+      border-radius: 8px;
+    }
+  }
+
+  &.primary {
+    color: $white-color;
+    background: $primary-color;
+  }
+
+  &.secondary {
+    color: $white-color;
+    background: $secondary-color;
   }
 
   &.link {
