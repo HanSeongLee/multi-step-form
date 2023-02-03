@@ -5,6 +5,10 @@
   flex-direction: column;
   gap: 3px;
 
+  @include media(">desktop") {
+    gap: 8px;
+  }
+
   &.error {
     .input {
       outline-color: $error-color;
@@ -16,16 +20,20 @@
     align-items: center;
     justify-content: space-between;
     gap: 8px;
+    font-size: 12px;
+    line-height: 14px;
+
+    @include media(">desktop") {
+      font-size: 14px;
+      line-height: 16px;
+    }
 
     .label {
-      font-size: 12px;
-      line-height: 14px;
       color: $secondary-color;
     }
 
     .errorMessage {
-      font-size: 12px;
-      line-height: 14px;
+      font-weight: 700;
       text-align: right;
       color: $error-color;
     }
@@ -42,6 +50,14 @@
     outline: 1px solid $border-color;
     border-radius: 4px;
     padding: 11px 16px 12px;
+
+    @include media(">desktop") {
+      min-height: 48px;
+      font-size: 16px;
+      line-height: 25px;
+      padding: 12px 16px 11px;
+      border-radius: 8px;
+    }
 
     &::placeholder {
       color: $natural-color;
