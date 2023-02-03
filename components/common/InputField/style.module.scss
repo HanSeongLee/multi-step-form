@@ -50,6 +50,7 @@
     outline: 1px solid $border-color;
     border-radius: 4px;
     padding: 11px 16px 12px;
+    transition: outline-color 0.3s;
 
     @include media(">desktop") {
       min-height: 48px;
@@ -64,6 +65,10 @@
     }
 
     &:focus {
+      outline-color: $primary-color;
+    }
+
+    &:hover {
       outline-color: $primary-color;
     }
   }
