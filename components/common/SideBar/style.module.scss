@@ -20,6 +20,7 @@
     width: 274px;
     background: url("/img/bg-sidebar-desktop.svg") no-repeat;
     background-size: cover;
+    padding: 40px 32px;
   }
 
   .stepContainer {
@@ -33,6 +34,7 @@
       flex-direction: column;
       align-items: flex-start;
       justify-content: flex-start;
+      gap: 32px;
     }
 
     .step {
