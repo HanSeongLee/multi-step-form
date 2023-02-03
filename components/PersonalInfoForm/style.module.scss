@@ -1,0 +1,14 @@
+@import "styles/utils";
+
+.personalInfoForm {
+
+  .container {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+
+    @include media(">desktop") {
+      gap: 24px;
+    }
+  }
+}
