@@ -6,6 +6,11 @@
   gap: 12px;
   list-style: none;
 
+  @include media(">desktop") {
+    flex-direction: row;
+    gap: 18px;
+  }
+
   .option {
     display: flex;
     gap: 14px;
@@ -15,6 +20,14 @@
     border-radius: 8px;
     padding: 14px 16px;
     cursor: pointer;
+
+    @include media(">desktop") {
+      flex: 1;
+      flex-direction: column;
+      justify-content: space-between;
+      gap: 39px;
+      padding: 20px 16px 16px;
+    }
 
     &.active {
       background: $active-color;
@@ -52,6 +65,11 @@
         line-height: 20px;
         color: $secondary-color;
         margin-top: 3px;
+
+        @include media(">desktop") {
+          margin-top: 6px;
+          line-height: 14px;
+        }
       }
     }
   }
