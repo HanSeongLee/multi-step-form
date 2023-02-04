@@ -5,10 +5,12 @@
   max-height: calc(100vh - 72px - 120px);
   overflow: scroll;
   border-radius: 10px;
+  padding-bottom: 99px;
 
   @include media(">desktop") {
     max-height: initial;
     overflow: hidden;
+    padding-bottom: 0;
   }
 
   .boxWrapper {
