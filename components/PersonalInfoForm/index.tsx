@@ -57,7 +57,7 @@ const PersonalInfoForm: React.FC<IProps> = ({ control, ...props }) => {
                             rules={defaultInputRule}
                             render={({ field, fieldState: { error } }) => (
                                 <InputField id={'phone'}
-                                            type={'tel'}
+                                            type={'text'}
                                             pattern={'^(\\+\\d{1,2}\\s)?\\(?\\d{2,3}\\)?[\\s]\\d{3,4}[\\s]\\d{3,4}$'}
                                             label={'Phone Number'}
                                             placeholder={'e.g. +1 234 567 890'}
