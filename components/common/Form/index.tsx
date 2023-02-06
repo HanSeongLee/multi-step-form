@@ -1,4 +1,4 @@
-import React, { FormHTMLAttributes } from 'react';
+import React, { CSSProperties, FormHTMLAttributes, useEffect, useRef, useState } from 'react';
 import styles from './style.module.scss';
 import cn from 'classnames';
 import Button from 'components/common/Button';
@@ -21,8 +21,27 @@ const Form: React.FC<IProps> = ({
                                     confirmButtonText, confirmButtonVariant, footerHidden,
                                     className, children, ...props
                                 }) => {
+    const [formProperties, setFormProperties] = useState<CSSProperties>();
+
+    const onResize = () => {
+        const vh = window.innerHeight;
+        setFormProperties({
+            '--vh': `${vh}px`,
+        } as CSSProperties);
+    };
+
+    useEffect(() => {
+        onResize();
+        window.addEventListener('resize', onResize);
+
+        return () => {
+            window.removeEventListener('resize', onResize);
+        };
+    }, []);
+
     return (
         <form className={cn(styles.form, className)}
+              style={formProperties}
               {...props}
         >
             <Box className={styles.boxWrapper}>
